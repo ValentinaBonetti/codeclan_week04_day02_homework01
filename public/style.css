@@ -1,0 +1,37 @@
+body {
+  text-align: center;
+  /background-image: url("pizza.jpeg");
+  /* background-color: red; */
+  font-family: "Arial",sans-serif;
+}
+
+table, th, tr, td {
+    color: blue;
+    border: 1px solid black;
+    text-align: center;
+}
+
+table, th {
+    color: blue;
+    border: 1px solid black;
+    text-align: center;
+}
+
+div.background {
+    background: url(pizza.jpeg) repeat;
+    border: 2px solid blue;
+}
+
+div.transbox {
+    margin: 100px;
+    background-color: #ffffff;
+    border: 2px solid blue;
+    opacity: 0.75;
+    filter: alpha(opacity=60);
+}
+
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: blue;
+}

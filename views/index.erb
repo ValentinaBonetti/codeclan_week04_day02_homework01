@@ -1,0 +1,24 @@
+<!-- visible comment -->
+<%# ruby comment (unvisible in html) %>
+<%# note: you shouldn't have to write too much ruby here... %>
+<%# if you do, you are doing something wrong! %>
+
+<h1> ALL THE PIZZAS </h1>
+<div>
+<table align="center" style="width:50%">
+  <tr>
+    <th>Name</th>
+    <th>Order</th>
+    <th>Options</th>
+</tr>
+  <% for order in @orders %>
+  <tr>
+      <td><%= order.pretty_name %></td>
+      <td> n.<%= order.quantity %> pizzas with <%= order.topping%></td>
+      <td><a href="/pizza-orders/<%= order.id %>"> Show </a></td>
+  </tr>
+  <% end %>
+</table>
+</div>
+
+<p><a href="/pizza-orders/new"> Create a new pizza order </a></p>

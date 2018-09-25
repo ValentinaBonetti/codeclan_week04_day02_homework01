@@ -1,0 +1,30 @@
+<h1> Edit your pizza order! </h1>
+
+  <p> Name: <%= @order.pretty_name() %></p>
+  <p> Order: n.<%= @order.quantity %> pizzas with <%= @order.topping%>
+
+    <%# the name should match the property on the pizza order model;
+        the label input needs to match the input id %>
+
+    <%# post allows to send info %>
+    <form method="post" action="/pizza-orders/<%=@order.id%>/edit">
+      <label for="first-name">First Name:</label>
+      <input id="first-name" type="text" name="first_name" value="<%=@order.first_name%>"/>
+
+      <label for="last-name">Last Name:</label>
+      <input id="last-name" type="text" name="last_name" value="<%=@order.last_name%>"/>
+
+      <label for="Pizza-select">Select a pizza: </label>
+      <select id="pizza-select" name="topping">
+        <option selected="<%=@order.topping%>"><%=@order.topping%></option>
+        <option value="Margherita">Margherita</option>
+        <option value="Calzone">Calzone</option>
+        <option value="Calzone">Italian Sausage</option>
+      </select>
+
+      <label for="quantity">Quantity: </label>
+      <input id="quantity" type="number" name="quantity" value="<%=@order.quantity%>"/>
+
+      <input type="submit" value="Order Pizza"/>
+
+    </form>
