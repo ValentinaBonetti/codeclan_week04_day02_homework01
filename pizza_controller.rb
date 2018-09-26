@@ -53,9 +53,6 @@ post '/pizza-orders/:id/delete' do
   # erb(:delete)
 end
 
-# get '/pizza-orders/:id/edit' do
-#   erb(:edit)
-# end
 
 # # delete - delete a pizza-order
 # post '/pizza-orders/:id/delete' do
