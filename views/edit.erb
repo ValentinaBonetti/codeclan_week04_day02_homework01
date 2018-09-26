@@ -16,10 +16,10 @@
 
       <label for="Pizza-select">Select a pizza: </label>
       <select id="pizza-select" name="topping">
-        <option selected="<%=@order.topping%>"><%=@order.topping%></option>
-        <option value="Margherita">Margherita</option>
-        <option value="Calzone">Calzone</option>
-        <option value="Calzone">Italian Sausage</option>
+        <!-- <option selected="<%=@order.topping%>"><%=@order.topping%></option> -->
+        <option value="Margherita" <%="selected" if @order.topping == "Margherita"%>>Margherita</option>
+        <option value="Calzone" <%="selected" if @order.topping == "Calzone"%>>Calzone</option>
+        <option value="Italian Sausage" <%="selected" if @order.topping == "Italian Sausage"%>>Italian Sausage</option>
       </select>
 
       <label for="quantity">Quantity: </label>
